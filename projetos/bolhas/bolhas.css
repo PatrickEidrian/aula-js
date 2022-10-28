@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 10/16;
+    background: radial-gradient(circle at center center, #1E6091 30%, #184E77 90%);
+}
+
+.bolha {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border-radius: 50% 50% 55% 45% / 55% 50% 50% 45%;
+    box-shadow: -8px 9px 7px rgba(0, 0, 0, .8), inset -25px 25px 50px rgba(0, 0, 0, .4);
+}
+
+.reflexo {
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    width: 25px;
+    height: 15px;
+    border-radius: 50%;
+    background: #dedede;
+    transform: rotate(15deg);
+}
+
+.reflexo::before {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 95%;
+    width: 15px;
+    height: 10px;
+    background: #dedede;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.bolha:nth-child(2) {
+    transform: translate(85%, -50%) scale(.8);
+}
+
+.bolha:nth-child(3) {
+    transform: translate(55%, 50%) scale(.4);
+}
+
+.bolha:nth-child(4) {
+    transform: translate(-80%, 0%) scale(.2);
+}
+
+.bolha:nth-child(5) {
+    transform: translate(-75%, -50%) scale(.6);
+}
